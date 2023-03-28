@@ -1,0 +1,50 @@
+tags:
+  python_api: 'Python API'
+  complex_dag: 'Complex DAG'
+  single_node_mpi: 'Single node MPI'
+  high_throughput: 'High throughput'
+  data_transfer: 'Data transfer'
+  persistence_data: 'Persistence of Data'
+  good_docs: 'Good Documentation'
+
+tools:
+  gnu_parallel:
+    title: "GNU Parallel"
+    tags:
+      - single_node_mpi
+      - high_throughput
+      - good_docs
+    docs: https://www.gnu.org/software/parallel/
+    description: >
+      GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
+      A job can be a single command or a small script that has to be run for each of the lines 
+      in the input. The typical input is a list of files, a list of hosts, a list of users, a 
+      list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU 
+      parallel can then split the input and pipe it into commands in parallel.
+
+  taskfarmer:
+    title: "TaskFarmer"
+    tags:
+      - high_throughput
+    docs: https://docs.nersc.gov/jobs/workflow/taskfarmer/
+    description: >
+      TaskFarmer is a workflow manager developed in-house at NERSC to coordinate single or 
+      multicore tasks. It tracks which tasks have completed successfully, and allows 
+      straightforward re-submission of failed or un-run jobs from a task list.
+
+  snakemake:
+    title: "Snakemake"
+    tags:
+      - python_api
+      - complex_dag
+      - single_node_mpi
+      - high_throughput
+      - good_docs
+    docs: https://snakemake.readthedocs.io/en/stable/
+    description: >
+      The Snakemake workflow management system is a tool to create reproducible and scalable 
+      data analyses. Workflows are described via a human readable, Python based language. 
+      They can be seamlessly scaled to server, cluster, grid and cloud environments, without 
+      the need to modify the workflow definition. Finally, Snakemake workflows can entail a 
+      description of required software, which will be automatically deployed to any execution 
+      environment.
