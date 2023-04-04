@@ -1,0 +1,9 @@
+.tableHeader{
+  position:sticky;
+  top: 0 ;
+}
+.card-img-top {
+  /* width: 20%; */
+  height: 100px;
+  object-fit: scale-down;
+}

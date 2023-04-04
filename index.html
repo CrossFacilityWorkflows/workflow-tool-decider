@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Workflow Tool Decider</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
 
     <!-- Header -->
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <a href="/workflow-tool-decider/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"></svg>
         <span class="fs-4">CrossFacilityWorkflows</span>
       </a>
-
-      <!-- <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Table</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Decision Tree</a></li>
-      </ul> -->
     </header>
 
 
@@ -29,16 +25,32 @@
         <div class="mb-3 mb-md-0 d-flex text-nowrap"></div>
         <h1 class="bd-title mb-0" id="content">Workflow Tool Decider</h1>
       </div>
-      <p class="bd-lead">This tool is designed to help you choose the best workflow tool for your ASCR facilities workloads. Hover over the names of the workflow tools for more information.</p>
+      <p class="bd-lead">This tool is designed to help you choose the best workflow tool for your ASCR facilities workloads.</p>
       
     </div>
 
     <!-- Body -->
-    <div class="container-fluid py-5">
-      <div class="table-responsive">
-<table border="1" class="dataframe table table-bordered table-hover">
+    <div class="container-fluid m-1">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Table</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tools</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Decision Tree</button>
+      </li>
+    </div>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="table-tab">
+        <div class="container-fluid py-5">
+          <div class="table-responsive tableHeader">
+  <table border="1" class="dataframe table table-bordered table-hover">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
       <th>Python API</th>
       <th>Complex DAG</th>
@@ -62,38 +74,97 @@
   <tbody>
     <tr>
       <th><a href="https://www.gnu.org/software/parallel/">GNU Parallel</a></th>
-      <td></td>
-      <td></td>
-      <td>x</td>
-      <td>x</td>
-      <td></td>
-      <td></td>
-      <td>x</td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
     </tr>
     <tr>
       <th><a href="https://docs.nersc.gov/jobs/workflow/taskfarmer/">TaskFarmer</a></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>x</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
     </tr>
     <tr>
       <th><a href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a></th>
-      <td>x</td>
-      <td>x</td>
-      <td>x</td>
-      <td>x</td>
-      <td></td>
-      <td></td>
-      <td>x</td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
     </tr>
   </tbody>
 </table>
-</div>
     </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container-fluid py-5">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+    <div class="card">
+      <a href="https://www.gnu.org/software/parallel/"><img width="10px" src="https://www.gnu.org/software/parallel/logo-gray+black300.png" class="card-img-top" alt="GNU Parallel"></a>
+      <div class="card-body">
+        <h5 class="card-title">GNU Parallel</h5>
+        <p class="card-text">GNU parallel is a shell tool for executing jobs in parallel using one or more computers.  A job can be a single command or a small script that has to be run for each of the lines  in the input. The typical input is a list of files, a list of hosts, a list of users, a  list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU  parallel can then split the input and pipe it into commands in parallel.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
+<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://docs.nersc.gov/jobs/workflow/taskfarmer/"><img width="10px" src="https://avatars.githubusercontent.com/u/1380484" class="card-img-top" alt="TaskFarmer"></a>
+      <div class="card-body">
+        <h5 class="card-title">TaskFarmer</h5>
+        <p class="card-text">TaskFarmer is a workflow manager developed in-house at NERSC to coordinate single or  multicore tasks. It tracks which tasks have completed successfully, and allows  straightforward re-submission of failed or un-run jobs from a task list.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://snakemake.readthedocs.io/en/stable/"><img width="10px" src="https://avatars.githubusercontent.com/u/33450111" class="card-img-top" alt="Snakemake"></a>
+      <div class="card-body">
+        <h5 class="card-title">Snakemake</h5>
+        <p class="card-text">The Snakemake workflow management system is a tool to create reproducible and scalable  data analyses. Workflows are described via a human readable, Python based language.  They can be seamlessly scaled to server, cluster, grid and cloud environments, without  the need to modify the workflow definition. Finally, Snakemake workflows can entail a  description of required software, which will be automatically deployed to any execution  environment.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
+<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
+<button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
+<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="container-fluid py-5">
+          
+        </div>
+      </div>
+
+    </div>
+
+    
 
     <!-- Vertical space -->
     <p style="margin-bottom:3cm;"></p>

@@ -15,6 +15,7 @@ tools:
       - high_throughput
       - good_docs
     docs: https://www.gnu.org/software/parallel/
+    img: https://www.gnu.org/software/parallel/logo-gray+black300.png
     description: >
       GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
       A job can be a single command or a small script that has to be run for each of the lines 
@@ -27,6 +28,7 @@ tools:
     tags:
       - high_throughput
     docs: https://docs.nersc.gov/jobs/workflow/taskfarmer/
+    img: https://avatars.githubusercontent.com/u/1380484
     description: >
       TaskFarmer is a workflow manager developed in-house at NERSC to coordinate single or 
       multicore tasks. It tracks which tasks have completed successfully, and allows 
@@ -41,6 +43,7 @@ tools:
       - high_throughput
       - good_docs
     docs: https://snakemake.readthedocs.io/en/stable/
+    img: https://avatars.githubusercontent.com/u/33450111
     description: >
       The Snakemake workflow management system is a tool to create reproducible and scalable 
       data analyses. Workflows are described via a human readable, Python based language. 
