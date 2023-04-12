@@ -33,10 +33,10 @@
     <div class="container-fluid m-1">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Table</button>
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Tools</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tools</button>
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Table</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Decision Tree</button>
@@ -46,6 +46,98 @@
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="table-tab">
+        <div class="container-fluid py-5">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <div class="col">
+    <div class="card">
+      <a href="https://www.gnu.org/software/parallel/"><img width="10px" src="https://www.gnu.org/software/parallel/logo-gray+black300.png" class="card-img-top" alt="GNU Parallel"></a>
+      <div class="card-body">
+        <h5 class="card-title">GNU Parallel</h5>
+        <p class="card-text">GNU parallel is a shell tool for executing jobs in parallel using one or more computers.  A job can be a single command or a small script that has to be run for each of the lines  in the input. The typical input is a list of files, a list of hosts, a list of users, a  list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU  parallel can then split the input and pipe it into commands in parallel.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
+<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://parsl.readthedocs.io/en/stable/"><img width="10px" src="https://parsl-project.org/images/logos/parsl-logo.png" class="card-img-top" alt="Parsl"></a>
+      <div class="card-body">
+        <h5 class="card-title">Parsl</h5>
+        <p class="card-text">Parsl extends parallelism in Python beyond a single computer. You can use Parsl just like  Python's parallel executors but across multiple cores and nodes. However, the real power  of Parsl is in expressing multi-step workflows of functions. Parsl lets you chain  functions together and will launch each function as inputs and computing resources are  available.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
+<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
+<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://materialsproject.github.io/fireworks/"><img width="10px" src="https://raw.githubusercontent.com/materialsproject/fireworks/main/docs_rst/_static/FireWorks_logo.png" class="card-img-top" alt="FireWorks"></a>
+      <div class="card-body">
+        <h5 class="card-title">FireWorks</h5>
+        <p class="card-text">FireWorks is a free, open-source code for defining, managing, and executing workflows.  Complex workflows can be defined using Python, JSON, or YAML, are stored using MongoDB,  and can be monitored through a built-in web interface. FireWorks has dynamic workflows,  failure-detection routines, and built-in tools and execution modes for running high-throughput  computations at large computing centers.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
+<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://balsam.readthedocs.io/en/latest/"><img width="10px" src="https://balsam.readthedocs.io/en/latest/img/balsam-all-green-nobg.png" class="card-img-top" alt="Balsam"></a>
+      <div class="card-body">
+        <h5 class="card-title">Balsam</h5>
+        <p class="card-text">A unified platform to manage high-throughput workflows across the HPC landscape.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
+<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://docs.nersc.gov/jobs/workflow/taskfarmer/"><img width="10px" src="https://avatars.githubusercontent.com/u/1380484" class="card-img-top" alt="TaskFarmer"></a>
+      <div class="card-body">
+        <h5 class="card-title">TaskFarmer</h5>
+        <p class="card-text">TaskFarmer is a workflow manager developed in-house at NERSC to coordinate single or  multicore tasks. It tracks which tasks have completed successfully, and allows  straightforward re-submission of failed or un-run jobs from a task list.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button></p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="card">
+      <a href="https://snakemake.readthedocs.io/en/stable/"><img width="10px" src="https://avatars.githubusercontent.com/u/33450111" class="card-img-top" alt="Snakemake"></a>
+      <div class="card-body">
+        <h5 class="card-title">Snakemake</h5>
+        <p class="card-text">The Snakemake workflow management system is a tool to create reproducible and scalable  data analyses. Workflows are described via a human readable, Python based language.  They can be seamlessly scaled to server, cluster, grid and cloud environments, without  the need to modify the workflow definition. Finally, Snakemake workflows can entail a  description of required software, which will be automatically deployed to any execution  environment.
+</p>
+        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
+<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
+<button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
+<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
+<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <div class="container-fluid py-5">
           <div class="table-responsive tableHeader">
   <table border="1" class="dataframe table table-bordered table-hover">
@@ -83,6 +175,36 @@
       <td style="text-align:center"><b>x</b></td>
     </tr>
     <tr>
+      <th><a href="https://parsl.readthedocs.io/en/stable/">Parsl</a></th>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+    </tr>
+    <tr>
+      <th><a href="https://materialsproject.github.io/fireworks/">FireWorks</a></th>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+    </tr>
+    <tr>
+      <th><a href="https://balsam.readthedocs.io/en/latest/">Balsam</a></th>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b>x</b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+      <td style="text-align:center"><b></b></td>
+    </tr>
+    <tr>
       <th><a href="https://docs.nersc.gov/jobs/workflow/taskfarmer/">TaskFarmer</a></th>
       <td style="text-align:center"><b></b></td>
       <td style="text-align:center"><b></b></td>
@@ -107,58 +229,11 @@
     </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="container-fluid py-5">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-
-    <div class="col">
-    <div class="card">
-      <a href="https://www.gnu.org/software/parallel/"><img width="10px" src="https://www.gnu.org/software/parallel/logo-gray+black300.png" class="card-img-top" alt="GNU Parallel"></a>
-      <div class="card-body">
-        <h5 class="card-title">GNU Parallel</h5>
-        <p class="card-text">GNU parallel is a shell tool for executing jobs in parallel using one or more computers.  A job can be a single command or a small script that has to be run for each of the lines  in the input. The typical input is a list of files, a list of hosts, a list of users, a  list of URLs, or a list of tables. A job can also be a command that reads from a pipe. GNU  parallel can then split the input and pipe it into commands in parallel.
-</p>
-        <p class="card-text pt-2"><button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
-<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
-<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
-      </div>
-    </div>
-    </div>
-    
-    <div class="col">
-    <div class="card">
-      <a href="https://docs.nersc.gov/jobs/workflow/taskfarmer/"><img width="10px" src="https://avatars.githubusercontent.com/u/1380484" class="card-img-top" alt="TaskFarmer"></a>
-      <div class="card-body">
-        <h5 class="card-title">TaskFarmer</h5>
-        <p class="card-text">TaskFarmer is a workflow manager developed in-house at NERSC to coordinate single or  multicore tasks. It tracks which tasks have completed successfully, and allows  straightforward re-submission of failed or un-run jobs from a task list.
-</p>
-        <p class="card-text pt-2"><button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button></p>
-      </div>
-    </div>
-    </div>
-    
-    <div class="col">
-    <div class="card">
-      <a href="https://snakemake.readthedocs.io/en/stable/"><img width="10px" src="https://avatars.githubusercontent.com/u/33450111" class="card-img-top" alt="Snakemake"></a>
-      <div class="card-body">
-        <h5 class="card-title">Snakemake</h5>
-        <p class="card-text">The Snakemake workflow management system is a tool to create reproducible and scalable  data analyses. Workflows are described via a human readable, Python based language.  They can be seamlessly scaled to server, cluster, grid and cloud environments, without  the need to modify the workflow definition. Finally, Snakemake workflows can entail a  description of required software, which will be automatically deployed to any execution  environment.
-</p>
-        <p class="card-text pt-2"><button style="background-color:#3182bd;color: #FFF" type="button" class="btn">python_api</button>
-<button style="background-color:#c6dbef;color: #FFF" type="button" class="btn">complex_dag</button>
-<button style="background-color:#fdae6b;color: #FFF" type="button" class="btn">single_node_mpi</button>
-<button style="background-color:#a1d99b;color: #FFF" type="button" class="btn">high_throughput</button>
-<button style="background-color:#d9d9d9;color: #FFF" type="button" class="btn">good_docs</button></p>
-      </div>
-    </div>
-    </div>
-    </div>
-
-        </div>
-      </div>
       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <div class="container-fluid py-5">
-          
+        <div class="container-fluid m-3 py-1">
+          <!-- <button type="button" class="btn btn-primary" onclick="expandAll()"> Open All </button> -->
+          <button type="button" class="btn btn-primary" onclick="collapseAll()"> Reset </button>
+          <div id="graph"></div>
         </div>
       </div>
 
@@ -179,7 +254,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="main.js"></script>
     
   </body>
 

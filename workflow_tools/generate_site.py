@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -50,7 +51,6 @@ def generate_cards_from_dict(yaml_file):
     tags = yaml_file['tags'].keys()
     colors = {c[0]: rgb2hex(c[1]) for c in zip(tags, cmap(np.linspace(0, 1, len(tags))))}
 
-    
     #Loop through tools
     html_string += ''.join([_gen_card(v, colors) for v in yaml_file['tools'].values()])
 
@@ -77,11 +77,41 @@ def _gen_card(tool_dict, colors):
     #Add images
     return html_out
 
+#Generate the decision tree from the yaml file
+def gen_tree_data(yaml_file):
+    #Load tags from yaml
+    tag_mappings = yaml_file['tags']
+    
+    #Generate Decision tree dict
+    treeData = _gen_child(yaml_file['questions'].copy())
+
+    return json.dumps(treeData, indent=2)
+
+def _gen_child(Qs):
+    branch_dict = {}
+    q = Qs.pop(0)
+    branch_dict['name'] = q['title']
+    branch_dict['tag'] = q['tag']
+    
+    if len(Qs) != 0:
+        branch_dict['children'] = [
+            {'name': 'yes', 'children': [_gen_child(Qs.copy())]}, 
+            {'name': 'no', 'children': [_gen_child(Qs.copy())]}
+        ]
+    else:
+        branch_dict['children'] = [
+            {'name': 'yes', 'children': None}, 
+            {'name': 'no', 'children': None}
+        ]
+    
+    return branch_dict
+
+
 #Load workflow tool data from yaml file
 with open('workflow_tools.yaml', 'r') as in_file:
     workflow_tools_file = safe_load(in_file)
 
-#Convert yaml data into table
+#Convert yaml data into table + cards
 df = convert_tools_to_df(workflow_tools_file)
 bold_frmt = lambda x: f'<b>{x}</b>'
 table_html = df.to_html(
@@ -92,14 +122,22 @@ table_html = df.to_html(
 )
 table_html = post_process_table(table_html)
 cards_html = generate_cards_from_dict(workflow_tools_file)
+treedata_html = gen_tree_data(workflow_tools_file)
 
 #Load index template
 environment = Environment(loader=FileSystemLoader("../templates/"))
 index_template = environment.get_template("index.html")
+js_template = environment.get_template("main.js")
 
 #Generate index.html file
 filename = "../index.html"
 with open(filename, mode="w", encoding="utf-8") as out_file:
     out_file.write(index_template.render(table=table_html, cards=cards_html))
+print(f"Generated {filename}")
+
+#Generate main.js file
+filename = "../main.js"
+with open(filename, mode="w", encoding="utf-8") as out_file:
+    out_file.write(js_template.render(treedata=treedata_html))
 
 print(f"Generated {filename}")
