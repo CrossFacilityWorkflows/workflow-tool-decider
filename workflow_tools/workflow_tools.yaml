@@ -63,7 +63,9 @@ tools:
     docs: https://balsam.readthedocs.io/en/latest/
     img: https://balsam.readthedocs.io/en/latest/img/balsam-all-green-nobg.png
     description: >
-      A unified platform to manage high-throughput workflows across the HPC landscape.
+      Balsam is a unified platform to manage high-throughput workflows across the HPC landscape. 
+      It was developed by the ALCF Data Science group, to optimize workflow execution on ALCF 
+      systems (and elsewhere).
 
   taskfarmer:
     title: "TaskFarmer"
